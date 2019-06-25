@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--main screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="main screen" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,7 +103,13 @@
                             <outletCollection property="gestureRecognizers" destination="0o0-S6-vnK" appends="YES" id="AN8-3h-d1o"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="uTZ-GG-lOd"/>
+                    <navigationItem key="navigationItem" id="uTZ-GG-lOd">
+                        <barButtonItem key="rightBarButtonItem" title="Customize" id="lfx-yk-wGd">
+                            <connections>
+                                <segue destination="xgg-91-ud6" kind="show" id="bff-hm-3aM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="R5P-1H-6PT" id="mVV-Y4-AUm"/>
                         <outlet property="tipControl" destination="8Ki-Hj-ytk" id="t4S-oU-6E3"/>
@@ -118,7 +124,67 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="113.83928571428571"/>
+            <point key="canvasLocation" x="2088" y="114"/>
+        </scene>
+        <!--settings-->
+        <scene sceneID="vQn-4c-Orl">
+            <objects>
+                <viewController id="xgg-91-ud6" userLabel="settings" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mqg-4U-UqQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="j90-IO-0tz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JkI-lJ-ast" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3061" y="126"/>
+        </scene>
+        <!--initial screen-->
+        <scene sceneID="dm3-mS-HsV">
+            <objects>
+                <viewController id="d2a-hG-fsC" userLabel="initial screen" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cwx-rH-tMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Total Pay" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TVw-H4-Utv">
+                                <rect key="frame" x="60" y="162" width="295" height="252"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="0.99999994039535522" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="86"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iaw-rM-Mhn">
+                                <rect key="frame" x="112" y="747" width="190" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.34079581643648627" green="0.53854695431472077" blue="0.31364090528193506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="44"/>
+                                <color key="tintColor" red="0.34079581640000001" green="0.53854695429999999" blue="0.31364090529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Calculate!">
+                                    <color key="titleColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="yV0-wd-Q3F"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PinClipart.com_free-clip-art-money_3394897" translatesAutoresizingMaskIntoConstraints="NO" id="vB4-9g-vgn">
+                                <rect key="frame" x="66" y="448" width="289" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.076069049537181854" green="0.32878702878952026" blue="0.096863724291324615" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="SfN-cu-enE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AC9-8E-t9T"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" id="Voc-my-h13"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJZ-2m-zIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156.521739130435" y="113.83928571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g8f-al-F84">
@@ -131,7 +197,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pnn-5t-7Jz"/>
+                        <segue destination="d2a-hG-fsC" kind="relationship" relationship="rootViewController" id="BwJ-Xk-6Z4"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwL-De-st5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -140,6 +206,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="PinClipart.com_free-clip-art-money_3394897" width="962" height="807"/>
         <image name="cartoon-wallet-bill-money-cash-dollar-vector-12235925" width="1000" height="1015"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Voc-my-h13"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.1567874551" green="0.32382136579999998" blue="0.1293689311" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
