@@ -14,6 +14,7 @@
 
 @implementation SettingsViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -33,16 +34,18 @@
     
 //    self.label1.text = [NSString stringWithFormat:@"%f",_slider1.value];
     self.label1.text = [NSString stringWithFormat:@"%.0f",_slider1.value];
+//    newPerc[0] = [NSString stringWithFormat:@"%.0f",_slider1.value];
 }
 
 - (IBAction)slider1Action:(id)sender {
 }
 - (IBAction)slider2Action:(id)sender {
     self.label2.text = [NSString stringWithFormat:@"%.0f",_slider2.value];
+//    newPerc[1] = [NSString stringWithFormat:@"%.0f",_slider2.value];
 
 }
 - (IBAction)slider3Action:(id)sender {
     self.label3.text = [NSString stringWithFormat:@"%.0f",_slider3.value];
-
+//    newPerc[2] = [NSString stringWithFormat:@"%.0f",_slider3.value];
 }
 @end
