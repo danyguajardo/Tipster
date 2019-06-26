@@ -194,6 +194,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="50"/>
                                 <state key="normal" title="Customize"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="CBE-VG-3R0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -237,7 +240,7 @@
                                     <color key="titleColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="yV0-wd-Q3F"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="zGr-0W-DIB"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PinClipart.com_free-clip-art-money_3394897" translatesAutoresizingMaskIntoConstraints="NO" id="vB4-9g-vgn">
@@ -249,9 +252,6 @@
                         <viewLayoutGuide key="safeArea" id="SfN-cu-enE"/>
                     </view>
                     <navigationItem key="navigationItem" id="AC9-8E-t9T"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="Voc-my-h13"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJZ-2m-zIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,7 +281,7 @@
         <image name="cartoon-wallet-bill-money-cash-dollar-vector-12235925" width="1000" height="1015"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Voc-my-h13"/>
+        <segue reference="zGr-0W-DIB"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.1567874551" green="0.32382136579999998" blue="0.1293689311" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
