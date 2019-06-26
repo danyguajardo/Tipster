@@ -15,6 +15,7 @@
 		13A0CE6D22C2C11C00EBEA76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0CE6C22C2C11C00EBEA76 /* main.m */; };
 		13A0CE7722C2C11C00EBEA76 /* TipsterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0CE7622C2C11C00EBEA76 /* TipsterTests.m */; };
 		13A0CE8222C2C11C00EBEA76 /* TipsterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0CE8122C2C11C00EBEA76 /* TipsterUITests.m */; };
+		13A0CE9122C2E70400EBEA76 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0CE9022C2E70400EBEA76 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		13A0CE7D22C2C11C00EBEA76 /* TipsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A0CE8122C2C11C00EBEA76 /* TipsterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipsterUITests.m; sourceTree = "<group>"; };
 		13A0CE8322C2C11C00EBEA76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13A0CE8F22C2E70400EBEA76 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		13A0CE9022C2E70400EBEA76 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				13A0CE6022C2C11C00EBEA76 /* ViewController.h */,
 				13A0CE6122C2C11C00EBEA76 /* ViewController.m */,
 				13A0CE6322C2C11C00EBEA76 /* Main.storyboard */,
+				13A0CE8F22C2E70400EBEA76 /* SettingsViewController.h */,
+				13A0CE9022C2E70400EBEA76 /* SettingsViewController.m */,
 				13A0CE6622C2C11C00EBEA76 /* Assets.xcassets */,
 				13A0CE6822C2C11C00EBEA76 /* LaunchScreen.storyboard */,
 				13A0CE6B22C2C11C00EBEA76 /* Info.plist */,
@@ -265,6 +270,7 @@
 				13A0CE6222C2C11C00EBEA76 /* ViewController.m in Sources */,
 				13A0CE6D22C2C11C00EBEA76 /* main.m in Sources */,
 				13A0CE5F22C2C11C00EBEA76 /* AppDelegate.m in Sources */,
+				13A0CE9122C2E70400EBEA76 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

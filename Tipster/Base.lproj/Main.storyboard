@@ -129,17 +129,88 @@
         <!--settings-->
         <scene sceneID="vQn-4c-Orl">
             <objects>
-                <viewController id="xgg-91-ud6" userLabel="settings" sceneMemberID="viewController">
+                <viewController id="xgg-91-ud6" userLabel="settings" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mqg-4U-UqQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="In order to customize the tax percentages used, please specify each percentage using the sliders below" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iPB-Y8-Fmz" userLabel="Description">
+                                <rect key="frame" x="20" y="123" width="374" height="306"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.1567874551" green="0.32382136579999998" blue="0.1293689311" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="E7m-D3-Wm1" userLabel="first slider">
+                                <rect key="frame" x="59" y="475" width="181" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="slider1:" destination="xgg-91-ud6" eventType="valueChanged" id="fsf-uD-Mr1"/>
+                                    <action selector="slider1Action:" destination="xgg-91-ud6" eventType="valueChanged" id="qOZ-9g-ktF"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGS-po-2XN" userLabel="firstPer">
+                                <rect key="frame" x="245" y="453" width="149" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="S7j-BJ-HII" userLabel="second slider">
+                                <rect key="frame" x="59" y="581" width="181" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="slider1:" destination="xgg-91-ud6" eventType="valueChanged" id="0qT-gu-Efo"/>
+                                    <action selector="slider1Action:" destination="xgg-91-ud6" eventType="valueChanged" id="mav-28-pZB"/>
+                                    <action selector="slider2Action:" destination="xgg-91-ud6" eventType="valueChanged" id="BAW-7I-5EL"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGU-3p-sdX" userLabel="secondPer">
+                                <rect key="frame" x="245" y="559" width="149" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="22" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="Ztm-H0-L2p" userLabel="third slider">
+                                <rect key="frame" x="59" y="694" width="181" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="slider1:" destination="xgg-91-ud6" eventType="valueChanged" id="LO7-JH-Ggm"/>
+                                    <action selector="slider1Action:" destination="xgg-91-ud6" eventType="valueChanged" id="wnJ-CL-mJO"/>
+                                    <action selector="slider3Action:" destination="xgg-91-ud6" eventType="valueChanged" id="fVf-h4-MlY"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="22" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7u4-fd-GLk" userLabel="thirdPer">
+                                <rect key="frame" x="245" y="672" width="149" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEg-eO-wNX">
+                                <rect key="frame" x="111" y="770" width="192" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="50"/>
+                                <state key="normal" title="Customize"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="j90-IO-0tz"/>
                     </view>
+                    <connections>
+                        <outlet property="label1" destination="wGS-po-2XN" id="RCg-9v-c46"/>
+                        <outlet property="label2" destination="BGU-3p-sdX" id="t6v-ih-KGM"/>
+                        <outlet property="label3" destination="7u4-fd-GLk" id="1sU-gk-dUM"/>
+                        <outlet property="slider1" destination="E7m-D3-Wm1" id="dTc-FE-GCs"/>
+                        <outlet property="slider2" destination="S7j-BJ-HII" id="L6d-jx-gOZ"/>
+                        <outlet property="slider3" destination="Ztm-H0-L2p" id="UD3-ZL-neM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JkI-lJ-ast" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3061" y="126"/>
+            <point key="canvasLocation" x="2922" y="114"/>
         </scene>
         <!--initial screen-->
         <scene sceneID="dm3-mS-HsV">
